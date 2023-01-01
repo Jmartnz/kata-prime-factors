@@ -5,6 +5,8 @@ import java.util.List;
 
 public class PrimeFactors {
     public static List<Integer> generate(int number) {
-        return new ArrayList<>();
+        var primes = new ArrayList<Integer>();
+        if (number == 2) primes.add(2);
+        return primes;
     }
 }

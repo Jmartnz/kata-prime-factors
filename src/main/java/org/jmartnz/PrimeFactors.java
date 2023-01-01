@@ -6,14 +6,13 @@ import java.util.List;
 public class PrimeFactors {
     public static List<Integer> generate(int number) {
         var primes = new ArrayList<Integer>();
-        if (number > 1) {
-            while (number % 2 == 0) {
-                primes.add(2);
-                number /= 2;
+        int candidate = 2;
+        while (number > 1) {
+            while (number % candidate == 0) {
+                primes.add(candidate);
+                number /= candidate;
             }
-            if (number > 1) {
-                primes.add(number);
-            }
+            candidate++;
         }
         return primes;
     }

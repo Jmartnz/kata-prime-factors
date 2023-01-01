@@ -23,4 +23,9 @@ class PrimeFactorsTest {
     void testThree() {
         assertThat(PrimeFactors.generate(3)).isEqualTo(List.of(3));
     }
+
+    @Test
+    void testFour() {
+        assertThat(PrimeFactors.generate(4)).isEqualTo(List.of(2, 2));
+    }
 }
